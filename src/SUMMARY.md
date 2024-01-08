@@ -17,3 +17,6 @@
     - [Execute (`exe`)](./rocket-core/execute.md)
     - [Memory (`mem`)](./rocket-core/memory.md)
     - [Writeback (`wb`)](./rocket-core/writeback.md)
+
+---
+- [References](./references.md)
