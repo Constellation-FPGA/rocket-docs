@@ -3,6 +3,7 @@
 [Introduction](./intro.md)
 
 - [Elaboration-Time Parameters](./elaboration-time/parameters.md)
+    - [`CoreParams`](./elaboration-time/core-params.md)
 - [Design Constants](./elaboration-time/design-constants.md)
 - [Diplomacy Parameters](./diplomacy/parameters.md)
     - [Finding Final SoC Parameters](./diplomacy/final-soc-parameters.md)
