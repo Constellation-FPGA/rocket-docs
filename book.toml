@@ -1,0 +1,6 @@
+[book]
+authors = ["Karl Hallsby"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rocket-Core Documentation: The Reverse-Engineered Version"
