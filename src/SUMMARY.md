@@ -4,6 +4,7 @@
 
 - [Elaboration-Time Parameters](./elaboration-time/parameters.md)
     - [`CoreParams`](./elaboration-time/core-params.md)
+    - [`ICacheParams`](./elaboration-time/icache-params.md)
 - [Design Constants](./elaboration-time/design-constants.md)
 - [Diplomacy](./diplomacy.md)
     - [Diplomacy Parameters](./diplomacy/parameters.md)
