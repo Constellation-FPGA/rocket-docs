@@ -19,6 +19,7 @@
     - [`IBuf` (Instruction Buffer)](./modules/ibuf.md)
     - [`TLB` (Translation Lookaside Buffer)](./modules/tlb.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
+    - [Utility Modules](./modules/utilities.md)
 - [Subsystems](./subsystems.md)
     - [Branch Prediction](./subsystems/branch-prediction.md)
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
