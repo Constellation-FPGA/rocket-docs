@@ -1,4 +1,6 @@
-# `Frontend` and `FrontendModule`
+# The Frontend
+
+## `Frontend` and `FrontendModule`
 `Frontend` and `FrontendModule` are lazy modules, which requires two classes to be created.
   1. `Frontend` extends `LazyModule`, which makes it the outer wrapping class.
       It instantiates the `FrontendModule` lazily using the `lazy` keyword.
@@ -6,11 +8,11 @@
 
 The `Frontend` module does relatively little work (just connecting some signals to/from the lazy module), so we only discuss the `FrontendModule` implementation.
 
-## `FrontendReq`
+### `FrontendReq`
 
-## `FrontendResp`
+### `FrontendResp`
 
-## `FrontendIO`
+### `FrontendIO`
 Combines many signals together for communicating between the main core and the frontend instruction fetcher/buffer.
 These signals include:
   * [`FrontendReq`](#frontendreq)
@@ -19,7 +21,7 @@ These signals include:
   * [`BHTUpdate`](./bht.md)
   * [`RASUpdate`](./ras.md)
 
-## `FrontendModule`
+### `FrontendModule`
 Has a TLB, using the TLB parameters provided by the configuration system.
 
 <div class="warning">
