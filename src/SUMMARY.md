@@ -16,6 +16,7 @@
     - [`BTB` (Branch Target Buffer)](./modules/btb.md)
     - [`BHT` (Branch History Table)](./modules/bht.md)
     - [`RAS` (Return Address Stack)](./modules/ras.md)
+    - [`ICache` and `ICacheModule`](./modules/icache.md)
     - [`TLB` (Translation Lookaside Buffer)](./modules/tlb.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
     - [`Frontend` and `FrontendModule`](./modules/frontend.md)
