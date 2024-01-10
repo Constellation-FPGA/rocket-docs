@@ -15,6 +15,7 @@
     - [`BHT` (Branch History Table)](./modules/bht.md)
     - [`RAS` (Return Address Stack)](./modules/ras.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
+    - [`Frontend` and `FrontendModule`](./modules/frontend.md)
 - [Top-Level Rocket-Core](./rocket-core.md)
     - [Fetch](./rocket-core/fetch.md)
     - [Decode (`id`)](./rocket-core/decode.md)
