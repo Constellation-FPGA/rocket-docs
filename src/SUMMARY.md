@@ -9,6 +9,7 @@
     - [Diplomacy Parameters](./diplomacy/parameters.md)
     - [Nondiplomatic Parameters](./diplomacy/nondiplomatic-parameters.md)
     - [Finding Final SoC Parameters](./diplomacy/final-soc-parameters.md)
+- [TileLink](./tilelink.md)
 - [Individual Modules](./modules.md)
     - [`IBuf` (Instruction Buffer)](./modules/ibuf.md)
     - [`BTB` (Branch Target Buffer)](./modules/btb.md)
