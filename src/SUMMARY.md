@@ -11,6 +11,7 @@
     - [`IBuf` (Instruction Buffer)](./modules/ibuf.md)
     - [`BTB` (Branch Target Buffer)](./modules/btb.md)
     - [`BHT` (Branch History Table)](./modules/bht.md)
+    - [`RAS` (Return Address Stack)](./modules/ras.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
 - [Top-Level Rocket-Core](./rocket-core.md)
     - [Fetch](./rocket-core/fetch.md)
