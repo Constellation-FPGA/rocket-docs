@@ -16,6 +16,7 @@
     - [`BTB` (Branch Target Buffer)](./modules/btb.md)
     - [`BHT` (Branch History Table)](./modules/bht.md)
     - [`RAS` (Return Address Stack)](./modules/ras.md)
+    - [`TLB` (Translation Lookaside Buffer)](./modules/tlb.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
     - [`Frontend` and `FrontendModule`](./modules/frontend.md)
 - [Top-Level Rocket-Core](./rocket-core.md)
