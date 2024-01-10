@@ -20,6 +20,7 @@
     - [`TLB` (Translation Lookaside Buffer)](./modules/tlb.md)
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
     - [Utility Modules](./modules/utilities.md)
+        - [`ShiftQueue`](./modules/shift-queue.md)
 - [Subsystems](./subsystems.md)
     - [Branch Prediction](./subsystems/branch-prediction.md)
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
