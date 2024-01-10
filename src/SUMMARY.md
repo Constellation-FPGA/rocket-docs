@@ -21,6 +21,7 @@
     - [`MStatus` (Machine Status)](./modules/mstatus.md)
     - [Utility Modules](./modules/utilities.md)
         - [`ShiftQueue`](./modules/shift-queue.md)
+        - [`DescribedSRAM`](./modules/described-sram.md)
 - [Subsystems](./subsystems.md)
     - [Branch Prediction](./subsystems/branch-prediction.md)
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
