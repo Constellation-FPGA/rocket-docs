@@ -8,7 +8,7 @@ title = "Rocket-Core Documentation: The Reverse-Engineered Version"
 [output.html]
 default-theme = "dark"
 curly-quotes = true
-mathjax-support = false
+mathjax-support = true
 copy-fonts = true
 git-repository-url = "https://github.com/Constellation-FPGA/rocket-docs"
 git-repository-icon = "fa-github"
