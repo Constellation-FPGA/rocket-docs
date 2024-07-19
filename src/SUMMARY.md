@@ -26,6 +26,7 @@
     - [Branch Prediction](./subsystems/branch-prediction.md)
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
     - [Frontend Subsystem](./subsystems/frontend.md)
+    - [Trap-handling Subsystem](./subsystems/trap-handling.md)
 - [Rocket-Core Design](./rocket-core.md)
     - [Fetch](./rocket-core/fetch.md)
     - [Decode (`id`)](./rocket-core/decode.md)
