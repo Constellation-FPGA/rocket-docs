@@ -26,7 +26,7 @@
     - [Branch Prediction](./subsystems/branch-prediction.md)
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
     - [Frontend Subsystem](./subsystems/frontend.md)
-- [Top-Level Rocket-Core](./rocket-core.md)
+- [Rocket-Core Design](./rocket-core.md)
     - [Fetch](./rocket-core/fetch.md)
     - [Decode (`id`)](./rocket-core/decode.md)
     - [Execute (`exe`)](./rocket-core/execute.md)
