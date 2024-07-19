@@ -148,29 +148,6 @@ blockquote {
     border-bottom: .1em solid var(--quote-border);
 }
 
-.warning {
-    margin: 20px;
-    padding: 0 20px;
-    border-inline-start: 2px solid var(--warning-border);
-}
-
-.warning:before {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    margin-inline-start: calc(-1.5rem - 21px);
-    content: "ⓘ";
-    text-align: center;
-    background-color: var(--bg);
-    color: var(--warning-border);
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-blockquote .warning:before {
-    background-color: var(--quote-bg);
-}
-
 kbd {
     background-color: var(--table-border-color);
     border-radius: 4px;
@@ -223,4 +200,27 @@ kbd {
 
 .result-no-output {
     font-style: italic;
+}
+
+.warning {
+    margin: 20px;
+    padding: 0 20px;
+    border-inline-start: 2px solid var(--warning-border);
+}
+
+.warning:before {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    margin-inline-start: calc(-1.5rem - 21px);
+    content: "ⓘ";
+    text-align: center;
+    background-color: var(--bg);
+    color: var(--warning-border);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+blockquote .warning:before {
+    background-color: var(--quote-bg);
 }
