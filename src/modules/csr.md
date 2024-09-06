@@ -36,3 +36,11 @@ Notable fields include:
   * `status`: The state of the [`MStatus`](#mstatus-machine-status) CSRs.
   * `hstatus`: The state of the `HStatus` CSRs.
   * `gstatus`: The state of the [`MStatus`](#mstatus-machine-status) CSRs.
+
+## `CSRFile`
+One of the more important parts of this module is that it decodes a passed instruction and decides if it is one of:
+  * `call`
+  * `break`
+  * `insn_ret`: `mret`/`sret`
+  * `cease`/`halt`
+  * `wfi`
