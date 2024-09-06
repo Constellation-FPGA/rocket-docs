@@ -28,3 +28,22 @@ After a precise exception is detected, the processor flushes out the entire pipe
 <div class="note">
 Please see the <a href="https://github.com/riscv/riscv-isa-manual/releases">RISC-V privileged specification</a> to see a listing of all CSRs.
 </div>
+
+When a trap comes in, `io.evec` gets set with the value from `tvec`.
+`tvec` selects which of the trap vectors should be used, from one of:
+  1. `debugTVec`, if debugging is available and the trap has been marked as to-be-debugged.
+  2. `nmiTVec`, which handles non-maskable interrupts.
+  3. `stvec`, if delegation is from machine-mode is enabled.
+  4. `mtvec`, otherwise.
+
+The selection of `tvec` is as follows:
+  1. If this trap should be debugged, use `debugTVec`.
+  2. Otherwise, if this is a non-maskable interrupt, use `nmiTVec`.
+  3. Otherwise, this is a `notDebugTVec`, and should be decided based on the mode being delegated to.
+  4. The value of `notDebugTVec` is found using:
+     1. Where the trap is being delegated to (Machine, Virtual Supervisor, or normal Supervisor), forming the `base` address.
+     2. The interrupt vector addres in the trap table, based on the `cause` and alignment.
+     3. `tvec` is set to either the `base` address or the `interruptVec` address depending on whether vectored interrupt handling is enabled.
+
+When an `mret` or `sret` is executed, `io.evec` is set to the value that was stored in the appropriate `xepc` CSR when the trap occurred.
+Other CSR registers are reset to the values held in their previous CSR registers, as these return instructions are specified to do.
