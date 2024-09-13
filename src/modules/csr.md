@@ -44,3 +44,17 @@ One of the more important parts of this module is that it decodes a passed instr
   * `insn_ret`: `mret`/`sret`
   * `cease`/`halt`
   * `wfi`
+
+This is decoded the same way that Rocket decodes instructions generally, using the `DecodeLogic` class.
+The designer maps the instruction's Chisel symbol to a list of "signals", which map to one of the CSR-changing possibilities.
+A snippet of Rocket's `CSR.scala` is included below to illustrate how this mapping is written.
+```scala
+val decode_table = Seq(ECALL->       List(Y,N,N,N,N,N,N,N,N),
+                       EBREAK->      List(N,Y,N,N,N,N,N,N,N),
+                       MRET->        List(N,N,Y,N,N,N,N,N,N))
+
+val insn_call :: insn_break :: insn_ret :: insn_cease :: insn_wfi :: _ :: _ :: _ :: _ :: Nil = {
+  val insn = ECALL.value.U | (io.rw.addr << 20)
+  DecodeLogic(insn, decode_table(0)._2.map(x=>X), decode_table).map(system_insn && _.asBool)
+}
+```
