@@ -39,8 +39,8 @@ Notable fields include:
 
 ## `CSRFile`
 One of the more important parts of this module is that it decodes a passed instruction and decides if it is one of:
-  * `call`
-  * `break`
+  * `call`: `ecall`
+  * `break`: `ebreak`
   * `insn_ret`: `mret`/`sret`
   * `cease`/`halt`
   * `wfi`
