@@ -47,3 +47,11 @@ The selection of `tvec` is as follows:
 
 When an `mret` or `sret` is executed, `io.evec` is set to the value that was stored in the appropriate `xepc` CSR when the trap occurred.
 Other CSR registers are reset to the values held in their previous CSR registers, as these return instructions are specified to do.
+
+### `xCAUSE` After Handling
+RISC-V uses all possible bit combinations in the `xCAUSE` CSRs, so there is no "default" value to return to in this CSR.
+You (as the software programmer) are responsible for not reading the `xCAUSE` CSR when you should not.
+
+<div class="warning">
+Rocket's <CODE>CSR</CODE> module does <strong><em>not</em></strong> reset <code>xCAUSE</code> to any particular value after an <code>xRET</code> instruction is executed!
+</div>

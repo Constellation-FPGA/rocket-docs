@@ -38,6 +38,16 @@ Notable fields include:
   * `gstatus`: The state of the [`MStatus`](#mstatus-machine-status) CSRs.
 
 ## `CSRFile`
+Rocket's `CSRFile` is where the main logic of handling CSRs and changing privileges is implemented.
+This module is particularly large, so only select portions of it are highlighted here.
+
+### `xCAUSE` Registers
+The `mcause` and `scause` registers are defined in `CSRFile` and are added to the read-mapping in the file as well.
+These registers are set to a value ***only when a trap occurs***.
+They are ***never reset*** to a particular value.
+It is safe to act on the cause in these registers only **immediately after** entering a trap handler.
+
+### System Instructions
 One of the more important parts of this module is that it decodes a passed instruction and decides if it is one of:
   * `call`: `ecall`
   * `break`: `ebreak`
