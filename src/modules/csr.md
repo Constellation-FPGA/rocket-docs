@@ -12,7 +12,7 @@ val csr = CSRFile in RocketCore
 ```
 
 ### Default Values
-Because Rocket-chip is written in Chisel, all hardware **must** have known logical values at all time (unknown `X`, high-impedance `Z`, high-value `H`, low-value `L`, etc.) are not allowed.
+Because Rocket-chip is written in Chisel, all hardware **must** have known logical values at all times (unknown `X`, high-impedance `Z`, high-value `H`, low-value `L`, etc.) are not allowed.
 This means that fields marked as `UInt` will default to `0.U`, and fields marked as `Bool` will default to `false.B`.
 
 This means that `MPP` will be set to `0b00` initially, making your currently-executing machine mode look like it just came *from* user-mode.
@@ -46,6 +46,11 @@ The `mcause` and `scause` registers are defined in `CSRFile` and are added to th
 These registers are set to a value ***only when a trap occurs***.
 They are ***never reset*** to a particular value.
 It is safe to act on the cause in these registers only **immediately after** entering a trap handler.
+
+### Supported & Delegable Traps
+There is a set of supported traps (both interrupts and exceptions) in the module, and defines *which* traps are supported and which are delegable.
+Rocket may not support certain traps, which is marked in the `supported_interrupts` and `supported_exceptions` values.
+Some RISC-V specification revisions define that some traps cannot be delegated to lower privilege modes; which *are allowed* are defined as `delegable_interrupts` and `delegable_exceptions`.
 
 ### System Instructions
 One of the more important parts of this module is that it decodes a passed instruction and decides if it is one of:
