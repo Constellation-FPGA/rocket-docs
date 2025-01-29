@@ -55,3 +55,7 @@ You (as the software programmer) are responsible for not reading the `xCAUSE` CS
 <div class="warning">
 Rocket's <CODE>CSR</CODE> module does <strong><em>not</em></strong> reset <code>xCAUSE</code> to any particular value after an <code>xRET</code> instruction is executed!
 </div>
+
+
+## Trap Handling
+An exceptional instruction gets passed down the pipeline.
