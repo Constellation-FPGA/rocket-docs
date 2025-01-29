@@ -27,6 +27,7 @@
     - [L1 Cache Subsystem](./subsystems/l1-cache.md)
     - [Frontend Subsystem](./subsystems/frontend.md)
     - [Trap-handling Subsystem](./subsystems/trap-handling.md)
+    - [Instruction Decoding & Control Signals](./subsystems/inst-decode.md)
 - [Top-Level Rocket-Core](./rocket-core.md)
     - [Fetch](./rocket-core/fetch.md)
     - [Decode (`id`)](./rocket-core/decode.md)
