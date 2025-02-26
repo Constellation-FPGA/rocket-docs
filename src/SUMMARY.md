@@ -36,6 +36,7 @@
     - [Execute (`exe`)](./rocket-core/execute.md)
     - [Memory (`mem`)](./rocket-core/memory.md)
     - [Writeback (`wb`)](./rocket-core/writeback.md)
+    - [Hazards, Exceptions, Stalling, and Killing](./rocket-core/hazards-stalls-kills.md)
 
 ---
 - [References](./references.md)
