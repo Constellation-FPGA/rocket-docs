@@ -2,7 +2,7 @@
   description = "Rocket Documentation Wiki";
 
   # Nixpkgs version to use
-  inputs.nixpkgs.url = "nixpkgs/nixos-23.05";
+  inputs.nixpkgs.url = "nixpkgs/nixos-25.05";
 
   outputs = { self, nixpkgs }:
     let
