@@ -11,6 +11,22 @@ val io = CSRFileIO in CSRFile
 val csr = CSRFile in RocketCore
 ```
 
+There are also some non-specification fields in `MStatus`:
+  * `debug`: Is this hart in the debug privilege state?
+    This privilege state is meant for hardware-level debugging during manufacturing and is very unlikely to be set to `true.B` in any functioning system.
+  * `cease`: A custom state for Rocket-Core systems.
+    Is this hart meant to be idle/ceased and put into a low-power state?
+  * `wfi`: Is this hart "idling" in the wait-for-interrupt state after the `wfi` instruction?
+  * `isa`: An alias for the `misa` CSR and is shared with the rest of the core.
+  * `prv`: This hart's **current** privilege mode.
+  * `v`: Is this hart in "virtualized mode"?
+    If `true.B`, then the core is either in Virtualized Supervisor (VS) or Virtualized User (VU) mode, and page translations go through an extra step.
+    If `false.B`, then the core is non-virtualized and is executing Machine, Supervisor/Hypervisor, and User modes.
+  * `dprv`: The *effective* the effective privilege for data accesses (loads, stores, AMOs).
+    This is usually the same as `prv`, but the RISC-V spec allows different privilege levels for instruction fetch and data load/store.
+  * `dv`: The *effective* virtualization mode for data accesses (loads, stores, AMOs).
+    This is usually the same as `v`, but the RISC-V spec allows different privilege levels for instruction fetch and data load/store.
+
 ### Default Values
 Because Rocket-chip is written in Chisel, all hardware **must** have known logical values at all times (unknown `X`, high-impedance `Z`, high-value `H`, low-value `L`, etc.) are not allowed.
 This means that fields marked as `UInt` will default to `0.U`, and fields marked as `Bool` will default to `false.B`.
