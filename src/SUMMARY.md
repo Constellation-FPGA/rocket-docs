@@ -19,6 +19,7 @@
     - [`IBuf` (Instruction Buffer)](./modules/ibuf.md)
     - [`TLB` (Translation Lookaside Buffer)](./modules/tlb.md)
     - [`CSR`s (Control & Status Registers)](./modules/csr.md)
+    - [`HellaCache`](./modules/hellacache.md)
     - [Utility Modules](./modules/utilities.md)
         - [`ShiftQueue`](./modules/shift-queue.md)
         - [`DescribedSRAM`](./modules/described-sram.md)
